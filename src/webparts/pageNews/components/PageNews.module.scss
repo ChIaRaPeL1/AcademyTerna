@@ -1,0 +1,235 @@
+@import '~office-ui-fabric-react/dist/sass/References.scss';
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
+
+.pageNews {
+  .container {
+    width: 100%;
+    max-width: 700px;
+    margin: 0px auto;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  .row {
+    @include ms-Grid-row;
+    @include ms-fontColor-white;
+    background-color: $ms-color-themeDark;
+    padding: 20px;
+  }
+
+  .column {
+    @include ms-Grid-col;
+    @include ms-lg10;
+    @include ms-xl8;
+    @include ms-xlPush2;
+    @include ms-lgPush1;
+  }
+
+  .title {
+    @include ms-font-xl;
+    @include ms-fontColor-white;
+  }
+
+  .subTitle {
+    @include ms-font-l;
+    @include ms-fontColor-white;
+  }
+
+  .description {
+    @include ms-font-l;
+    @include ms-fontColor-white;
+  }
+
+  .button {
+    // Our button
+    text-decoration: none;
+    height: 32px;
+
+    // Primary Button
+    min-width: 80px;
+    background-color: $ms-color-themePrimary;
+    border-color: $ms-color-themePrimary;
+    color: $ms-color-white;
+
+    // Basic Button
+    outline: transparent;
+    position: relative;
+    font-family: "Space Grotesk";
+    //font-family: "Segoe UI WestEuropean","Segoe UI",-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: $ms-font-size-m;
+    font-weight: $ms-font-weight-regular;
+    border-width: 0;
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0 16px;
+
+    .label {
+      font-weight: $ms-font-weight-semibold;
+      font-size: $ms-font-size-m;
+      height: 32px;
+      line-height: 32px;
+      margin: 0 4px;
+      vertical-align: top;
+      display: inline-block;
+      font-family: "Space Grotesk";
+    }
+  }
+
+}
+  
+  .containerAllNews {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-family: "Space Grotesk";
+  }
+
+  @media (min-width:769px) {
+    .containerAllNews > div {   
+      font-family: "Space Grotesk"; 
+      box-sizing: border-box;
+      margin: 20px 20px 60px 0;
+      width: calc(1/2*100% - (1 - 1/2)*20px);
+    }
+  }
+  
+  @media (min-width:1025px) {
+    .containerAllNews > div {    
+      font-family: "Space Grotesk";
+      box-sizing: border-box;
+      margin: 20px 20px 60px 0;
+      width: calc(1/3*100% - (1 - 1/3)*20px);
+    }
+  }
+  
+  .containerAllNews > div:nth-child(3n) {
+    margin-right: 0;
+  }
+  
+  .containerAllNews::after {
+    content: '';
+    flex: auto;
+  }
+  
+  .containerAllNews > div:nth-child(-n+3) {
+    margin-top: -10;
+  }
+
+  /* .containerSingleNews {max-width: 30%; width: 100% !important; margin-bottom: 60px !important;margin: 15px;} */
+
+  /* .containerSingleNews > div {width: 100% !important;margin: 0 !important;} */
+
+  [class^="ms-DocumentCard"] {border:0 !important;max-width: 100% !important;margin: 0 !important;}
+
+  .containerNews {display: block;}
+  .containerHiddenNews {display: none;}
+  .containerTitleNews div {display: block;}
+  .containerShortDescription div {display: block;}
+  .containerShowMore {display: block;}
+
+  .containerNewsFirstRow {display:flex;justify-content:space-between;padding-top: 15px;flex-direction: column;}
+    .categoryNews div {font-family: "Space Grotesk"; font-size: 14px !important;font-weight: bold;padding: 0;height: auto;}
+    .dateNews {margin: 0;}
+    .dateNews div {font-family: "Space Grotesk"; font-size: 12px !important; font-weight: normal;padding: 0;height: auto;}
+    .tagNews div {font-family: "Space Grotesk"; font-size: 12px !important;height: auto;border: 1px solid #c4c4c4 !important;padding: 0 5px;}
+    .containerTitleNews h3,
+
+    .containerTitleNews p,
+    .containerNewsFirstRow p,
+    .containerShortDescription p,
+    .viewTitleNews div {margin: 0 !important;}
+
+  .titleNews div {font-family: "Space Grotesk"; font-size: 24px;font-weight: bold;padding: 0;height: auto;line-height: normal;
+    display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;}
+
+  .shortDescription div {font-family: "Space Grotesk"; font-size: 16px;font-weight: normal;padding: 0;height: auto;min-height: 150px;}
+
+  [class^="ms-DocumentCardLocation"] {font-family: "Space Grotesk"; font-size: 16px;font-weight: bold;color: #2e63af;padding: 0 !important;text-decoration: underline;margin-bottom: 0 !important;}
+
+
+  /* SECTION BIG */
+  .containerBigNews {font-family: "Space Grotesk"; display: flex; justify-content: space-between;align-items: center;}
+
+  .leftBigNews,  
+  .rightBigNews {width: 100%;}
+
+  .rightBigNews img {width: 100%;max-height: 380px;object-fit: cover;}  
+
+  .containerCategoryDateBigNews {display: flex;align-items: baseline;}
+
+  .categoryBigNews {font-family: "Space Grotesk"; font-size: 14px;font-weight: bold;margin: 0;margin-right: 18px;}
+
+  .dateBigNews {font-family: "Space Grotesk"; font-size: 12px;font-weight: normal;}
+
+  .titleBigNews {font-family: "Space Grotesk"; font-size: 24px;font-weight: bold;margin: 14px 0;}
+  .titleArticle {font-family: "Space Grotesk"; font-weight: bold;font-stretch: normal;color: #000000;}
+
+  .containerShortDescriptionBigNews {font-family: "Space Grotesk"; font-size: 16px;font-weight: normal;margin-bottom: 12px;}
+
+  .showMoreBigNews {font-family: "Space Grotesk"; font-size: 16px;font-weight: bold;color: #2e63af;padding: 0 !important;padding-top: 21px !important;text-decoration: underline;}
+
+  .containerDropdownCategories {font-family: "Space Grotesk"; max-width: 300px;width: 100%;margin-bottom: 50px;}
+
+  .hrSeparatorNews {font-family: "Space Grotesk"; height: 1px;width: 100%;background-color: rgba(0, 0, 0, 0.4);margin: 58px 0 40px 0;}
+
+  .hrSeparatorNews2 {font-family: "Space Grotesk"; height: 0px;max-width: 422px;width: 100%; background-color: rgba(46, 99, 175, 0.2);margin: 58px auto 40px auto;}
+
+  .viewAllNews {font-family: "Space Grotesk"; cursor:pointer; display: inline-block; width: 100%; text-align: center;font-size: 14px;font-weight: bold;color: #2e63af;    text-decoration: none;}
+  
+  .viewTitleNews{font-family: "Space Grotesk"; text-decoration: none;}
+  
+  @media (min-width:769px) and (max-width:1240px) {
+    .containerSingleNews {max-width: 45% !important;}
+    .shortDescription div {min-height: 180px;}
+  }
+
+  @media (min-width:769px){
+    .leftBigNews {margin-right: 44px;}
+  }
+
+  @media (max-width: 768px) {
+    .containerNewsFirstRow {padding-top: 0 !important;}
+    .containerBigNews {flex-direction: column-reverse;}
+    .containerNews {padding-left: 19px;}
+    .hrSeparatorNews {height: 0px;}    
+    .containerSingleNews {/*margin-bottom: 20px !important;*/max-width: 100% !important;}    
+    [class^=ms-DocumentCard] {margin-bottom: 35px !important;display: flex;flex-direction: row;}  
+    [class^=ms-DocumentCardDetails] {margin-bottom: 0px !important;}  
+    [class^=ms-DocumentCardTitle] {font-family: "Space Grotesk"; margin: 0 !important;padding: 0 !important;font-size: 16px !important;}
+    .titleNews div {font-family: "Space Grotesk"; display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;}
+    .shortDescription div {font-family: "Space Grotesk"; display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;font-size: 14px;}
+    .containerCategoryDateBigNews {font-family: "Space Grotesk"; flex-direction: column-reverse;}
+    [class^=ms-DocumentCardPreview] {font-family: "Space Grotesk"; max-width: 97px !important;margin-bottom: 0 !important;width: 100%;height: 100px;}
+    .containerShowMore {display: none;}
+    [class^=ms-Image] {width: 100px; height: 100px !important;}
+    .shortDescription div {min-height: auto !important;}
+    .rightBigNews img {max-height: 290px;}  
+  }
+
+  @media (max-width: 426px) {
+    .containerNewsFirstRow,
+    [class^=ms-DocumentCardLocation] {display: none;}
+    .shortDescription div {-webkit-line-clamp: 3;}
+    .rightBigNews img {max-height: 150px;}  
+    .customMarginMobileNegative {margin-bottom: -20%;}
+  }
+
+
+  @media (min-width: 1280px) {
+    .titleArticle{font-family: "Space Grotesk"; font-size: 30px;margin: 36px 0;width: 100%;text-align: center;}
+  }
+  
+  @media (min-width: 737px) and (max-width: 1279px)  { 
+    .titleArticle{font-family: "Space Grotesk"; text-align: left;}
+  }
+
+  @media(min-width: 295px) and (max-width: 736px) {
+    .titleArticle{ font-family: "Space Grotesk"; font-size: 20px;text-align: left;}
+  }
+
+  [class^=ms-Label] {
+    font-family: 'Space Grotesk' !important;
+    // font-family: Space Grotesk!important;
+  }

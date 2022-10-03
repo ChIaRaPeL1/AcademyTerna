@@ -1,0 +1,271 @@
+@import "~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss";
+
+
+.ternaFooter {
+  .container { 
+    max-width: 700px;
+    margin: 0px auto;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  .row {
+    @include ms-Grid-row;
+    @include ms-fontColor-white;
+    background-color: $ms-color-themeDark;
+    padding: 20px;
+  }
+
+  .column {
+    @include ms-Grid-col;
+    @include ms-lg10;
+    @include ms-xl8;
+    @include ms-xlPush2;
+    @include ms-lgPush1;
+  }
+
+  .title {
+    @include ms-font-xl;
+    @include ms-fontColor-white;
+  }
+
+  .subTitle {
+    @include ms-font-l;
+    @include ms-fontColor-white;
+  }
+
+  .description {
+    @include ms-font-l;
+    @include ms-fontColor-white;
+  }
+
+  .button {
+    // Our button
+    text-decoration: none;
+    height: 32px;
+
+    // Primary Button
+    min-width: 80px;
+    background-color: $ms-color-themePrimary;
+    border-color: $ms-color-themePrimary;
+    color: $ms-color-white;
+
+    // Basic Button
+    outline: transparent;
+    position: relative;
+    font-family: "Segoe UI WestEuropean", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: $ms-font-size-m;
+    font-weight: $ms-font-weight-regular;
+    border-width: 0;
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0 16px;
+
+    .label {
+      font-weight: $ms-font-weight-semibold;
+      font-size: $ms-font-size-m;
+      height: 32px;
+      line-height: 32px;
+      margin: 0 4px;
+      vertical-align: top;
+      display: inline-block;
+    }
+  }
+
+  .img-terna {
+    max-height: 22px;
+  }
+
+  .img-mail {
+    max-height: 20px;
+  }
+
+  .action-social img {
+    height: 14px;
+    width: 14px;
+  }
+  .action-social {
+    &.facebook img {
+      height: 18px;
+      width: 9px;
+    }
+  } 
+  .action-social {
+    &.youtube img {
+      height: 14px;
+      width: 20px;
+    }
+  } 
+  .action-social {
+    &.twitter img {
+      height: 14px;
+      width: 16px;
+    }
+  }
+
+  .dFlex {
+    display: flex;
+  }
+
+  .wrapper-social {
+    width: 15%;
+    justify-content: flex-end;
+    align-items: center;
+    .action-social{
+      margin-left: 16px!important;
+      &:first-child{
+        margin-left: 0!important;
+      }
+      @media screen and (max-width: 768px) {
+        margin-left: 33px!important;
+        &:first-child{
+          margin-left: 0!important;
+        }
+      }
+    }
+  }
+
+  .action-social {
+    margin-left: 15px;
+    @media screen and (max-width: 768px) {
+      margin-left: 3px;
+  }
+}
+
+  .wrapper-info-terna {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .row-footer {
+    display: flex;
+    background-color: #2e63af;
+    padding: 25px 38px;
+    justify-content: space-between;
+    border-top: 2px solid #fff
+  }
+
+  .wrapper-mail {
+    display: flex;
+    align-items: center;
+    margin-right: 7px;
+  }
+
+  .label-mail {
+    color: #ffffff;
+    font-size: 12px;
+    margin-left: 10px;
+  }
+
+  footer a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+
+  @media screen and (max-width: 768px) {
+    // .ternaFooter{
+    //   margin-top: -100px;
+    // }
+
+    .row-footer {
+      padding: 20px 10px;
+      border-top: 3px solid #fff;
+      //margin-top: -100px!important;
+    }
+
+    .wrapper-info-terna {
+      width: 100%;
+    }
+
+    .wrapper-social {
+      width: 100%;
+      margin-left: 0;
+      margin-top: 15px;
+      justify-content: center;
+    }
+  }
+
+  @media screen and (max-width: 425px) {
+    .wrapper-social {
+      margin-top: 15px;
+    }
+  }
+
+  .ms-SPLegacyFabricBlock {
+    height: unset !important;
+  }
+}
+
+
+
+.centerFooter {
+  display: flex;
+  justify-content: space-around;
+}
+
+.centerFooter,
+.centerFooter a {
+  color: #ffffff;
+  font-size: 12px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.logoFooter {
+  display: none;
+}
+
+.customTernaFooter {
+  align-items: baseline;
+}
+
+@media (min-width:769px) {
+  .centerFooterMail {
+    margin-left: 94px
+  }
+}
+
+@media (min-width:427px) {
+  .customTernaFooter {
+    flex-direction: row !important;
+  }
+}
+
+@media (max-width:768px) {
+  .customTernaFooter {
+    flex-direction: column !important;
+  }
+
+  .logoFooter {
+    display: block !important;
+    margin-right: 20px;
+  }
+
+  .logoFooterDesktop {
+    display: none !important;
+  }
+
+  .centerFooter {
+    display: flex;
+    align-content: space-around;
+    flex-direction: row;
+    width: 100%;
+    margin: 0;
+    align-items: center;
+  }
+  
+  .centerFooter a {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+  }
+
+  .socialIconCustom {
+    margin-top: 25px !important;
+  }
+
+}

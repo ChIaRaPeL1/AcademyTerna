@@ -1,0 +1,72 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "carousel-news-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/carouselNews/CarouselNewsWebPart.js",
+          "manifest": "./src/webparts/carouselNews/CarouselNewsWebPart.manifest.json"
+        }
+      ]
+    },
+    "news-second-livel-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/newsSecondLivel/NewsSecondLivelWebPart.js",
+          "manifest": "./src/webparts/newsSecondLivel/NewsSecondLivelWebPart.manifest.json"
+        }
+      ]
+    },
+    "footer-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/footer/FooterWebPart.js",
+          "manifest": "./src/webparts/footer/FooterWebPart.manifest.json"
+        }
+      ]
+    },
+    "page-news-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/pageNews/PageNewsWebPart.js",
+          "manifest": "./src/webparts/pageNews/PageNewsWebPart.manifest.json"
+        }
+      ]
+    },
+    "faculty-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/faculty/FacultyWebPart.js",
+          "manifest": "./src/webparts/faculty/FacultyWebPart.manifest.json"
+        }
+      ]
+    },
+    "section-box-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/sectionBox/SectionBoxWebPart.js",
+          "manifest": "./src/webparts/sectionBox/SectionBoxWebPart.manifest.json"
+        }
+      ]
+    },
+    "botton-top-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/bottonTop/BottonTopWebPart.js",
+          "manifest": "./src/webparts/bottonTop/BottonTopWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "CarouselNewsWebPartStrings": "lib/webparts/carouselNews/loc/{locale}.js",
+    "NewsSecondLivelWebPartStrings": "lib/webparts/newsSecondLivel/loc/{locale}.js",
+    "FooterWebPartStrings": "lib/webparts/footer/loc/{locale}.js",
+    "PageNewsWebPartStrings": "lib/webparts/pageNews/loc/{locale}.js",
+    "FacultyWebPartStrings": "lib/webparts/faculty/loc/{locale}.js",
+    "SectionBoxWebPartStrings": "lib/webparts/sectionBox/loc/{locale}.js",
+    "BottonTopWebPartStrings": "lib/webparts/bottonTop/loc/{locale}.js"
+  }
+}

@@ -1,0 +1,34 @@
+@import "~office-ui-fabric-react/dist/sass/References.scss";
+.backToTop {
+  display: none;
+  @media screen and (max-width: 768px) {
+  //position: fixed;
+  display: flex;
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 99999;
+  //border: 1px solid "[theme: white, default: #fffff]";
+  border: 1px solid #fff;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+  .iconButton {
+    width: 100px;
+    height: 40px;
+    background-color: white;
+    //background-color: "[theme: themePrimary, default: #0072ce]";
+    //background-color: "[theme: themePrimary, default: #fffff]";
+    .icon {
+      color: "[theme: themePrimary, default: #0072ce]";
+      color: #2e63af;
+      margin-right: 10px;
+      font-weight: bold;
+    }
+    // &:hover, &:active {
+    //   //background-color: "[theme: themePrimary, default: #0072ce]";
+    //   background-color: "[theme: themePrimary, default: #fffff]";
+    // }
+  }
+  }
+}
