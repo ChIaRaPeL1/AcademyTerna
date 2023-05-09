@@ -97,7 +97,7 @@ export default class SectionBox extends React.Component<ISectionBoxProps, ISecti
           </div>
           <div className={styles.column}>
             <div className={styles.Rituals} style={{ backgroundImage: `url(${this.state.absoluteUrl + this.state.imageRituals})` }}>
-              <span className={styles.title}>Terna Rituals</span>
+              <span className={styles.title}>Rituali Terna</span>
               <p className={styles.description}>Sfoglia la repository dei rituali Terna</p>
               <a href="https://ternaspa.sharepoint.com/sites/Ritualileadership" className={styles.button}>
                 <span className={styles.label}>Cerca Rituali <img className={styles.imageIcon} src={this.state.absoluteUrl + this.state.imageIconWhite}></img> </span>
