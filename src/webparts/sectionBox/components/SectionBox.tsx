@@ -75,8 +75,8 @@ export default class SectionBox extends React.Component<ISectionBoxProps, ISecti
                 </a>
               </div>
             </div>
-          }
-          <div className={styles.column}>
+          } {/** 
+        <div className={styles.column}>
             <div className={styles.columnDipendenti}>
               <span className={styles.title}>Non smettere mai di imparare</span>
               <p className={styles.description}>C'è qualcosa che vorresti imparare ma non lo trovi nell'offerta? Condividilo!</p>
@@ -103,7 +103,7 @@ export default class SectionBox extends React.Component<ISectionBoxProps, ISecti
                 <span className={styles.label}>Cerca Rituali <img className={styles.imageIcon} src={this.state.absoluteUrl + this.state.imageIconWhite}></img> </span>
               </a>
             </div>
-          </div>
+          </div>*/}
         </div>
         {/* </div> */}
       </div>
